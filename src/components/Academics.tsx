@@ -1,4 +1,4 @@
-export interface AcademiaEntry {
+export interface Institution {
   institution: string,
   url: URL,
   iconPath: string,
@@ -11,5 +11,5 @@ export interface AcademiaEntry {
 }
 
 export interface Academics {
-  entries: AcademiaEntry[]
+  entries: Institution[]
 }

@@ -1,16 +1,16 @@
 // Used for project and work experience descriptions
-export interface Entry {
+interface ExperienceEntry {
   iconPath: string,
   url?: URL,
   description: string[],
   relevantSkills: string[]
 }
 
-export interface ProjectEntry extends Entry {
+export interface ProjectEntry extends ExperienceEntry {
   projectName: string
 }
 
-export interface IndustryEntry extends Entry {
+export interface IndustryEntry extends ExperienceEntry {
   company: string,
   title: string,
   isCurrent: boolean,
