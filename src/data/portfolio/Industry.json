@@ -1,0 +1,61 @@
+{
+  "industry": [
+    {
+      "company": "c1",
+      "companyUrl": "https",
+      "title": "Employee 1",
+      "isCurrent": true,
+      "fromDate": "MM-DD-YY",
+      "toDate": "MM-DD-YY",
+      "iconPath": "some path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    },
+    {
+      "company": "c2",
+      "title": "Employee 1",
+      "companyUrl": "https",
+      "isCurrent": false,
+      "fromDate": "MM-DD-YY",
+      "toDate": "MM-DD-YY",
+      "iconPath": "some path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    },
+    {
+      "company": "c3",
+      "companyUrl": "https",
+      "title": "Employee 1",
+      "isCurrent": false,
+      "fromDate": "MM-DD-YY",
+      "toDate": "MM-DD-YY",
+      "iconPath": "some path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    }
+  ]
+}

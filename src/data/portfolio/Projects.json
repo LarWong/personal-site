@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "name": "P1",
+      "url": "https",
+      "iconPath": "some Path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    },
+    {
+      "name": "P2",
+      "url": "https",
+      "iconPath": "some Path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    },
+    {
+      "name": "P3",
+      "url": "https",
+      "iconPath": "some Path",
+      "description": [
+        "bullet1",
+        "bullet2",
+        "bullet3"
+      ],
+      "releventSkills": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ]
+    }
+  ]
+}

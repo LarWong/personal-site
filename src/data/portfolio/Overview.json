@@ -1,0 +1,13 @@
+{
+  "contact": {
+    "email": "thing@thing.thing",
+    "telephoneNumber": "1234567890"
+  },
+  "overview": {
+    "imagePath": "somePath",
+    "location": "Earth",
+    "name": "Name1 Name2",
+    "occupation": "Professional Worker",
+    "summary": "I'm da best!"
+  }
+}
