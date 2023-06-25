@@ -1,27 +1,23 @@
 import { useState, useEffect } from "react";
-import { Icon } from "@iconify/react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { DarkModeToggle } from "@anatoliygatt/dark-mode-toggle";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 type ThemeOptions = "light" | "dark";
-type ThemeIconOptions = "bx:sun" | "bx:moon";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState<ThemeOptions>("light");
-  const [themeIcon, setThemeIcon] = useState<ThemeIconOptions>("bx:sun");
+  const pastTheme =
+    (localStorage.getItem("theme") as ThemeOptions | null) ||
+    ("light" as ThemeOptions);
+  const [theme, setTheme] = useState<ThemeOptions>(pastTheme);
 
   useEffect(() => {
-    const pastTheme =
-      (localStorage.getItem("theme") as ThemeOptions | null) ||
-      ("light" as ThemeOptions);
-    setTheme(pastTheme);
-    setThemeIcon(pastTheme === "light" ? "bx:sun" : "bx:moon");
     localStorage.setItem("theme", theme);
-    document.body.classList.toggle("dark-theme");
-  }, []);
+    document.body.classList[theme === "light" ? "remove" : "add"]("dark-theme");
+  }, [theme]);
 
   const _toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
-    setThemeIcon(theme === "light" ? "bx:sun" : "bx:moon");
   };
 
   return (
@@ -36,12 +32,25 @@ export const ThemeToggle = () => {
         </Helmet>
       </HelmetProvider>
       <div className="home__options">
-        <Icon
-          className="bx change-theme"
-          icon={`${themeIcon}`}
-          id="theme-button"
-          onClick={_toggleTheme}
-        />
+        <div className="change-theme" id="theme-button">
+          <Icon icon="bx:moon" style={{ paddingRight: "0.2em" }} />
+          <DarkModeToggle
+            mode={theme}
+            size="sm"
+            inactiveTrackColor="#e2e8f0"
+            inactiveTrackColorOnHover="#f8fafc"
+            inactiveTrackColorOnActive="#cbd5e1"
+            activeTrackColor="#334155"
+            activeTrackColorOnHover="#1e293b"
+            activeTrackColorOnActive="#0f172a"
+            inactiveThumbColor="#1e293b"
+            activeThumbColor="#e2e8f0"
+            onChange={() => {
+              _toggleTheme();
+            }}
+          />
+          <Icon icon="bx:sun" style={{ paddingLeft: "0.2em" }} />
+        </div>
       </div>
     </>
   );
