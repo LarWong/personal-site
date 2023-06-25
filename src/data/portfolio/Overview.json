@@ -1,13 +1,14 @@
 {
-  "contacts": {
-    "email": "thing@thing.thing",
-    "telephoneNumber": "1234567890"
-  },
   "overview": {
-    "imagePath": "somePath",
-    "location": "Earth",
-    "name": "Name1 Name2",
-    "occupation": "Professional Worker",
-    "summary": "I'm da best!"
+    "id": "overview",
+    "summary": {
+      "description": "Something, Something, Hi!",
+      "name": "First Last",
+      "occupation": "Baker",
+      "location": "Austria",
+      "email": "baker@la.com",
+      "telephoneNumber": "123213123123123",
+      "imagePath": "/src/assets/cabbage.svg"
+    }
   }
 }

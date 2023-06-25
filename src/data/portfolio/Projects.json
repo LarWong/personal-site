@@ -1,49 +1,52 @@
 {
-  "projects": [
-    {
-      "name": "P1",
-      "url": "https",
-      "iconPath": "some Path",
-      "description": [
-        "bullet1",
-        "bullet2",
-        "bullet3"
-      ],
-      "relevantSkills": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ]
-    },
-    {
-      "name": "P2",
-      "url": "https",
-      "iconPath": "some Path",
-      "description": [
-        "bullet1",
-        "bullet2",
-        "bullet3"
-      ],
-      "relevantSkills": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ]
-    },
-    {
-      "name": "P3",
-      "url": "https",
-      "iconPath": "some Path",
-      "description": [
-        "bullet1",
-        "bullet2",
-        "bullet3"
-      ],
-      "relevantSkills": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ]
-    }
-  ]
+  "projects": {
+    "id": "projects",
+    "entries": [
+      {
+        "name": "P1",
+        "url": "https",
+        "iconPath": "some Path",
+        "description": [
+          "bullet1",
+          "bullet2",
+          "bullet3"
+        ],
+        "relevantSkills": [
+          "tech1",
+          "tech2",
+          "tech3"
+        ]
+      },
+      {
+        "name": "P2",
+        "url": "https",
+        "iconPath": "some Path",
+        "description": [
+          "bullet1",
+          "bullet2",
+          "bullet3"
+        ],
+        "relevantSkills": [
+          "tech1",
+          "tech2",
+          "tech3"
+        ]
+      },
+      {
+        "name": "P3",
+        "url": "https",
+        "iconPath": "some Path",
+        "description": [
+          "bullet1",
+          "bullet2",
+          "bullet3"
+        ],
+        "relevantSkills": [
+          "tech1",
+          "tech2",
+          "tech3"
+        ]
+      }
+    ]
+  }
 }
