@@ -1,24 +1,24 @@
 {
   "socialMedia": {
     "id": "social",
-    "social": [
+    "socials": [
       {
         "label": "Social-Name",
         "platform": "linkedin",
         "url": "https://www.linkedin.com/in/name",
-        "className": "bxl-linkedin-square"
+        "iconName": "bxl:linkedin-square"
       },
       {
         "label": "Social-Name",
         "platform": "github",
         "url": "https://github.com/name",
-        "className": "bxl-github"
+        "iconName": "bxl:github"
       },
       {
         "label": "Maaato",
         "platform": "twiiter",
         "url": "https://twitter.com/name",
-        "className": "bxl-twitter"
+        "iconName": "bxl:twitter"
       }
     ]
   }

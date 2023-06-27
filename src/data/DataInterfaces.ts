@@ -10,15 +10,16 @@ export type OverviewInterface = {
     imagePath: string;
   };
 };
+export type Social = {
+  label: string;
+  platform: string;
+  url: string;
+  iconName: string;
+};
 
 export type SocialMediaInterface = {
   id: string;
-  social: {
-    label: string;
-    platform: string;
-    url: string;
-    className: string;
-  }[];
+  socials: Social[];
 };
 
 export type AcademicsInterface = {

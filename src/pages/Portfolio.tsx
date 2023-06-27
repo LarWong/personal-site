@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { SEO } from "../components/SEO";
 import { Menu } from "../components/Menu";
 import { Profile } from "../components/Profile";
+import { Skills } from "../components/Skills";
+import { SocialMedia } from "../components/Socials";
 
 // interfaces
 import {
@@ -28,6 +30,24 @@ const academicsData: AcademicsInterface = _academicsData.academics;
 const projectsData: ProjectsInterface = _projectsData.projects;
 const industryData: IndustryInterface = _industryData.industry;
 
+const gatherSkills = () => {
+  // Current sources of skills:
+  // - projectsData
+  // - industryData
+  // To add more sources of skills, document source above, add to parameters,
+  // and edit logic below
+  let allSkills = new Set<string>();
+  projectsData.entries.forEach((entry) =>
+    entry.relevantSkills.forEach((skill) => allSkills.add(skill))
+  );
+  industryData.experiences.forEach((entry) =>
+    entry.relevantSkills.forEach((skill) => allSkills.add(skill))
+  );
+  return Array.from(allSkills);
+};
+
+const skillsData: string[] = gatherSkills();
+
 export const Portfolio = () => {
   // make shortcut menu appear when screen is small
   // for mobile devices
@@ -51,9 +71,8 @@ export const Portfolio = () => {
         <div className="resume" id="area-cv">
           <div className="resume__left">
             <Profile {...overviewData} />
-            {/* <AboutMe {...aboutMe} /> */}
-            {/* <Skills {...skills} /> */}
-            {/* <SocialMedia {...socialMedia} /> */}
+            <Skills technicalSkills={skillsData} softSkills={skillsData} />
+            <SocialMedia {...socialMediaData} />
           </div>
           <div className="resume__right">
             {/* <Works {...experience} /> */}
