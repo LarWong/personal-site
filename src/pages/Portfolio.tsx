@@ -37,12 +37,13 @@ const gatherSkills = () => {
   // To add more sources of skills, document source above, add to parameters,
   // and edit logic below
   let allSkills = new Set<string>();
-  projectsData.entries.forEach((entry) =>
-    entry.relevantSkills.forEach((skill) => allSkills.add(skill))
-  );
-  industryData.experiences.forEach((entry) =>
-    entry.relevantSkills.forEach((skill) => allSkills.add(skill))
-  );
+  const collect = <T extends { relevantSkills: string[] }>(list: T[]) => {
+    list.forEach((entry) => {
+      entry.relevantSkills.forEach((skill) => allSkills.add(skill));
+    });
+  };
+  collect(projectsData.entries);
+  collect(industryData.experiences);
   return Array.from(allSkills);
 };
 
