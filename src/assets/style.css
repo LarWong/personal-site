@@ -108,6 +108,7 @@ body.dark-theme {
 /*========== CSS CLASS ==========*/
 .section {
   padding: 1.5rem 0;
+  padding-left: 1em;
 }
 
 .section-title {
@@ -117,7 +118,8 @@ body.dark-theme {
   text-transform: uppercase;
   letter-spacing: 0.35rem;
   text-align: center;
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-2);
+  padding-left: 0.75em;
 }
 
 .bd-container {
@@ -231,6 +233,8 @@ body.dark-theme {
 
 .home__container {
   gap: 3rem;
+  padding-top: 3em;
+  padding-right: 1em;
 }
 
 .home__data {
@@ -313,6 +317,7 @@ body.dark-theme {
 
 .profile__description {
   text-align: center;
+  padding-left: 1em;
 }
 
 .education__content,
