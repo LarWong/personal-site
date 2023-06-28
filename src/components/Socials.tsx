@@ -11,7 +11,7 @@ const SocialEntry = ({ label, url, iconName }: Social) => {
 
 export const SocialMedia = ({ socials }: SocialMediaInterface) => {
   return (
-    <section className="social section">
+    <section className="social section" id="socials">
       <h2 className="section-title">Socials</h2>
       <div className="social__container bd-grid">
         {socials.map((social) => (

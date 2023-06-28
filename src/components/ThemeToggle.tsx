@@ -33,7 +33,7 @@ export const ThemeToggle = () => {
       </HelmetProvider>
       <div className="home__options">
         <div className="change-theme" id="theme-button">
-          <Icon icon="bx:moon" style={{ paddingRight: "0.15em" }} />
+          <Icon icon="bx:moon" style={{ paddingRight: "0.3em" }} />
           <DarkModeToggle
             mode={theme}
             size="sm"
@@ -49,7 +49,7 @@ export const ThemeToggle = () => {
               _toggleTheme();
             }}
           />
-          <Icon icon="bx:sun" style={{ paddingLeft: "0.15em" }} />
+          <Icon icon="bx:sun" style={{ paddingLeft: "0.3em" }} />
         </div>
       </div>
     </>

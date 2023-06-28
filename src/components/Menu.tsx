@@ -24,8 +24,8 @@ const menuEntries: entry[] = [
     iconName: "bx-home",
   },
   {
-    label: "Profile",
-    section: "#profile",
+    label: "Summary",
+    section: "#summary",
     iconName: "bx-user",
   },
   {

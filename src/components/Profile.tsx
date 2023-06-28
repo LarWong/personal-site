@@ -42,9 +42,9 @@ export const Profile = ({
         </div>
         <ThemeToggle />
       </section>
-      <section className="profile section" id="profile">
-        <h2 className="section-title">Profile</h2>
-        <p className="profile__description">{description}</p>
+      <section className="summary section" id="summary">
+        <h2 className="section-title">About Me</h2>
+        <p className="summary__description">{description}</p>
       </section>
     </>
   );
