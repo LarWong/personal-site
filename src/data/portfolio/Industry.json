@@ -1,9 +1,9 @@
 {
   "industry": {
     "id": "industry",
-    "experiences": [
+    "entries": [
       {
-        "company": "c1",
+        "name": "c1",
         "companyUrl": "https",
         "title": "Employee 1",
         "isCurrent": true,
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "company": "c2",
+        "name": "c2",
         "title": "Employee 1",
         "companyUrl": "https",
         "isCurrent": false,
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "company": "c3",
+        "name": "c3",
         "companyUrl": "https",
         "title": "Employee 1",
         "isCurrent": false,

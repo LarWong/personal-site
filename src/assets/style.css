@@ -395,6 +395,10 @@ body.dark-theme {
   margin-right: 0.75rem;
 }
 
+.work-experience {
+  margin-top: var(--mb-3);
+}
+
 /*========== MEDIA QUERIES ==========*/
 
 @media screen and (max-width: 320px) {

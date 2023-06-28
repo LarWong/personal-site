@@ -1,4 +1,4 @@
-export type OverviewInterface = {
+export interface OverviewInterface {
   id: string;
   summary: {
     description: string;
@@ -9,20 +9,20 @@ export type OverviewInterface = {
     telephoneNumber: string;
     imagePath: string;
   };
-};
-export type Social = {
+}
+export interface Social {
   label: string;
   platform: string;
   url: string;
   iconName: string;
-};
+}
 
-export type SocialMediaInterface = {
+export interface SocialMediaInterface {
   id: string;
   socials: Social[];
-};
+}
 
-export type AcademicsInterface = {
+export interface AcademicsInterface {
   id: string;
   institutions: {
     institution: string;
@@ -35,30 +35,26 @@ export type AcademicsInterface = {
     gpa: number;
     interestingClasses: string[];
   }[];
-};
+}
 
-export type ProjectsInterface = {
-  id: string;
-  entries: {
-    name: string;
-    url: string;
-    iconPath: string;
-    description: string[];
-    relevantSkills: string[];
-  }[];
-};
+export interface Experiences {
+  name: string;
+  description: string[];
+  relevantSkills: string[];
+  relevantUrl?: string;
+  title?: string;
+  isCurrent?: boolean;
+  fromDate?: string;
+  toDate?: string;
+  iconPath?: string;
+}
 
-export type IndustryInterface = {
+export interface ProjectsInterface {
   id: string;
-  experiences: {
-    company: string;
-    companyUrl: string;
-    title: string;
-    isCurrent: boolean;
-    fromDate: string;
-    toDate: string;
-    iconPath: string;
-    description: string[];
-    relevantSkills: string[];
-  }[];
-};
+  entries: Experiences[];
+}
+
+export interface IndustryInterface {
+  id: string;
+  entries: Experiences[];
+}

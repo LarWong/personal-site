@@ -6,6 +6,7 @@ import { Menu } from "../components/Menu";
 import { Profile } from "../components/Profile";
 import { Skills } from "../components/Skills";
 import { SocialMedia } from "../components/Socials";
+import { IndustryExperience } from "../components/IndustryExperience";
 
 // interfaces
 import {
@@ -43,7 +44,7 @@ const gatherSkills = () => {
     });
   };
   collect(projectsData.entries);
-  collect(industryData.experiences);
+  collect(industryData.entries);
   return Array.from(allSkills);
 };
 
@@ -76,7 +77,7 @@ export const Portfolio = () => {
             <SocialMedia {...socialMediaData} />
           </div>
           <div className="resume__right">
-            {/* <Works {...experience} /> */}
+            <IndustryExperience {...industryData} />
             {/* <Academic {...experience} /> */}
             {/* <Proyects {...experience} /> */}
           </div>
