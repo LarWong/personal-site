@@ -4,29 +4,25 @@
     "institutions": [
       {
         "institution": "place1",
-        "url": "https",
+        "degree": "M.S. in Presidency",
         "iconPath": "some path",
         "isAttending": true,
         "fromDate": "MM-DD-YYYY",
         "toDate": "MM-DD-YYYY",
         "location": "place",
         "gpa": 32.32,
-        "interestingClasses": [
-          "Intro to thing"
-        ]
+        "interestingClasses": ["Intro to thing"]
       },
       {
         "institution": "place2",
-        "url": "https",
+        "degree": "B.S. in CEO",
         "iconPath": "some path",
         "isAttending": false,
         "fromDate": "MM-DD-YYYY",
         "toDate": "MM-DD-YYYY",
         "location": "place1",
         "gpa": 32.32,
-        "interestingClasses": [
-          "Intro to thing"
-        ]
+        "interestingClasses": ["Intro to thing"]
       }
     ]
   }

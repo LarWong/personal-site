@@ -22,39 +22,47 @@ export interface SocialMediaInterface {
   socials: Social[];
 }
 
+export interface AcademicInstitution {
+  institution: string;
+  degree: string;
+  iconPath: string;
+  isAttending: boolean;
+  fromDate: string;
+  toDate: string;
+  location: string;
+  gpa: number;
+  interestingClasses: string[];
+}
+
 export interface AcademicsInterface {
   id: string;
-  institutions: {
-    institution: string;
-    url: string;
-    iconPath: string;
-    isAttending: boolean;
-    fromDate: string;
-    toDate: string;
-    location: string;
-    gpa: number;
-    interestingClasses: string[];
-  }[];
+  institutions: AcademicInstitution[];
 }
 
-export interface Experiences {
-  name: string;
+export interface IndustryExperience {
+  company: string;
   description: string[];
   relevantSkills: string[];
-  relevantUrl?: string;
-  title?: string;
-  isCurrent?: boolean;
-  fromDate?: string;
-  toDate?: string;
-  iconPath?: string;
-}
-
-export interface ProjectsInterface {
-  id: string;
-  entries: Experiences[];
+  title: string;
+  isCurrent: boolean;
+  fromDate: string;
+  toDate: string;
+  iconPath: string;
 }
 
 export interface IndustryInterface {
   id: string;
-  entries: Experiences[];
+  entries: IndustryExperience[];
+}
+
+export interface ProjectExperience {
+  name: string;
+  description: string[];
+  relevantSkills: string[];
+  relevantUrl: string;
+}
+
+export interface ProjectsInterface {
+  id: string;
+  entries: ProjectExperience[];
 }

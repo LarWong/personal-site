@@ -1,18 +1,13 @@
 import { Description } from "./ExperienceDescription";
-import { IndustryInterface, Experiences } from "../data/DataInterfaces";
-/*
-  name: string;
-  description: string[];
-  relevantSkills: string[];
-  relevantUrl?: string;
-  title?: string;
-  isCurrent?: boolean;
-  fromDate?: string;
-  toDate?: string;
-  iconPath?: string;
- * */
-// TODO: use the rest of the fields shown above
-const Work = ({ name, title, fromDate, description }: Experiences) => {
+import { IndustryInterface, IndustryExperience } from "../data/DataInterfaces";
+
+// TODO: use the rest of the fields
+const IndustryEntry = ({
+  company,
+  title,
+  fromDate,
+  description,
+}: IndustryExperience) => {
   return (
     <div className="experience__content">
       <div className="experience__time">
@@ -22,7 +17,7 @@ const Work = ({ name, title, fromDate, description }: Experiences) => {
       <div className="experience__data bd-grid">
         <h3 className="experience__title">{title}</h3>
         <span className="experience__company">
-          {fromDate} | {name}
+          {fromDate} | {company}
         </span>
         {description.map((desc, i) => (
           <Description key={i} desc={desc} />
@@ -32,13 +27,13 @@ const Work = ({ name, title, fromDate, description }: Experiences) => {
   );
 };
 
-export const IndustryExperience = ({ entries }: IndustryInterface) => {
+export const IndustryExperiences = ({ entries }: IndustryInterface) => {
   return (
     <section className="work-experience section" id="experience">
       <h2 className="section-title">Experiences</h2>
       <div className="experience__container bd-grid">
         {entries.map((work) => (
-          <Work key={work.name} {...work} />
+          <IndustryEntry key={work.company} {...work} />
         ))}
       </div>
     </section>
