@@ -32,6 +32,8 @@ const academicsData: AcademicsInterface = _academicsData.academics;
 const projectsData: ProjectsInterface = _projectsData.projects;
 const industryData: IndustryInterface = _industryData.industry;
 
+type SkillsTrait = { relevantSkills: string[] };
+
 const gatherSkills = () => {
   // Current sources of skills:
   // - projectsData
@@ -39,7 +41,7 @@ const gatherSkills = () => {
   // To add more sources of skills, document source above, add to parameters,
   // and edit logic below
   let allSkills = new Set<string>();
-  const collect = <T extends { relevantSkills: string[] }>(list: T[]) => {
+  const collect = <T extends SkillsTrait>(list: T[]) => {
     list.forEach((entry) => {
       entry.relevantSkills.forEach((skill) => allSkills.add(skill));
     });
