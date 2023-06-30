@@ -350,7 +350,7 @@ body.dark-theme {
 .experience__line {
   display: block;
   width: 2px;
-  height: 110%;
+  height: 100%;
   background-color: var(--text-color-light);
   transform: translate(7px, 0);
 }
@@ -397,7 +397,7 @@ body.dark-theme {
 }
 
 .work-experience {
-  margin-top: var(--mb-3);
+  /* margin-top: var(--mb-3); */
 }
 
 /*========== MEDIA QUERIES ==========*/

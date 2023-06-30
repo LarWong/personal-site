@@ -8,6 +8,7 @@ import { Skills } from "../components/Skills";
 import { SocialMedia } from "../components/Socials";
 import { IndustryExperiences } from "../components/Industry";
 import { AcademicExperiences } from "../components/Academics";
+import { Projects } from "../components/Projects";
 
 // interfaces
 import {
@@ -82,7 +83,7 @@ export const Portfolio = () => {
           <div className="resume__right">
             <IndustryExperiences {...industryData} />
             <AcademicExperiences {...academicsData} />
-            {/* <Proyects {...experience} /> */}
+            <Projects {...projectsData} />
           </div>
         </div>
       </main>
