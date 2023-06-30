@@ -43,7 +43,7 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 html {
@@ -102,7 +102,7 @@ body.dark-theme {
   position: absolute;
   align-items: center;
   /* right: 0; */
-  top: 0.75rem;
+  top: 0.05rem;
   display: flex;
   color: var(--text-color);
   font-size: 1.2rem;
@@ -110,7 +110,7 @@ body.dark-theme {
 
 /*========== CSS CLASS ==========*/
 .section {
-  padding: 1.5rem 0;
+  padding: 2.25em 0;
   padding-left: 1rem;
 }
 
@@ -397,7 +397,7 @@ body.dark-theme {
 }
 
 .work-experience {
-  /* margin-top: var(--mb-3); */
+  /* margin-top: 0.25rem; */
 }
 
 /*========== MEDIA QUERIES ==========*/
@@ -445,8 +445,12 @@ body.dark-theme {
     text-align: initial;
   }
 
+  .change-theme {
+    top: 1rem;
+  }
+
   .home__container {
-    padding-top: 2rem;
+    padding-top: 3rem;
     gap: 1.5rem;
   }
 }
