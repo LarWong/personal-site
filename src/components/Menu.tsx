@@ -81,7 +81,7 @@ export const Menu = () => {
           </div>
         </div>
       </header>
-      <Router basename="/">
+      <Router>
         <Routes>
           <Route path="" element={<Navigate replace to="/#home" />} />
         </Routes>

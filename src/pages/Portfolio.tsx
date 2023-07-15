@@ -9,6 +9,7 @@ import { SocialMedia } from "../components/Socials";
 import { IndustryExperiences } from "../components/Industry";
 import { AcademicExperiences } from "../components/Academics";
 import { Projects } from "../components/Projects";
+import { Footer } from "../components/Footer";
 
 // interfaces
 import {
@@ -79,13 +80,16 @@ export const Portfolio = () => {
             <Profile {...overviewData} />
             <Skills technicalSkills={skillsData} softSkills={skillsData} />
             <SocialMedia {...socialMediaData} />
+            <div className="padding"></div>
           </div>
           <div className="resume__right">
             <IndustryExperiences {...industryData} />
             <AcademicExperiences {...academicsData} />
             <Projects {...projectsData} />
+            <div className="padding"></div>
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );
