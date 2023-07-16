@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   BrowserRouter as Router,
-  Link,
+  // Link,
   Routes,
   Route,
   Navigate,
@@ -93,7 +93,7 @@ export const Menu = () => {
             <ul className="nav__list">
               {menuEntries.map(({ label, section, iconName }) => (
                 <li className="nav__item" key={label}>
-                  <Link
+                  <a
                     className={`nav__link menu-link ${
                       window.location.pathname === "/" &&
                       window.location.hash === section
@@ -110,11 +110,12 @@ export const Menu = () => {
                       }
                       setShow(!show);
                     }}
-                    to={{ pathname: "/", hash: section }}
+                    href={section}
+                    // to={{ pathname: "/", hash: section }}
                   >
                     <Icon className="bx nav__icon" icon={`bx:${iconName}`} />
                     <div>{`${label}`}</div>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
