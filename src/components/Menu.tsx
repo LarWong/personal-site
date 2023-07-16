@@ -113,8 +113,8 @@ export const Menu = () => {
                     href={section}
                     // to={{ pathname: "/", hash: section }}
                   >
-                    <Icon className="bx nav__icon" icon={`bx:${iconName}`} />
                     <div>{`${label}`}</div>
+                    <Icon className="bx nav__icon" icon={`bx:${iconName}`} />
                   </a>
                 </li>
               ))}

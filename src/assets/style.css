@@ -6,6 +6,7 @@
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
+  --smaller-header-height: 1.5rem;
 
   /*========== Colors ==========*/
   --title-color: #434c5e;
@@ -23,6 +24,7 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
+  --smallest-font-size: 0.8rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -156,22 +158,6 @@ body.dark-theme {
   align-items: center;
 }
 
-@media screen and (max-width: 968px) {
-  .nav__menu {
-    box-sizing: border-box;
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 2rem 1.5rem;
-    background-color: var(--body-color);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem 1rem 0 0;
-    z-index: var(--z-fixed);
-    transition: 0.5s;
-  }
-}
-
 .nav__logo,
 .nav__toggle {
   color: var(--title-color);
@@ -209,10 +195,6 @@ body.dark-theme {
   font-size: 1.2rem;
   margin-bottom: var(--mb-1);
   z-index: -1;
-}
-
-.show-menu {
-  bottom: var(--header-height);
 }
 
 .menu-link {
@@ -268,8 +250,9 @@ body.dark-theme {
   margin-bottom: var(--mb-1);
 }
 
-.home__address {
+.home__personal {
   gap: 1rem;
+  padding-left: 1.25rem;
 }
 
 .home__information {
@@ -323,7 +306,7 @@ body.dark-theme {
 
 .summary__description {
   /* text-align: center; */
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 .education__content,
@@ -412,6 +395,67 @@ body.dark-theme {
 }
 
 /*========== MEDIA QUERIES ==========*/
+@media screen and (max-width: 968px) {
+  .nav {
+    height: var(--smaller-header-height);
+  }
+
+  .nav__menu {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem 1rem 0 0;
+    z-index: var(--z-fixed);
+    transition: 0.5s;
+  }
+
+  .show-menu {
+    bottom: var(--header-height);
+  }
+
+  .section {
+    padding-bottom: 1.5rem;
+  }
+
+  .summary__description {
+    /* text-align: center; */
+    padding-left: 0rem;
+  }
+
+  .home__grid {
+    padding-left: 0rem;
+  }
+
+  .home__personal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    padding-left: 0rem;
+  }
+
+  .home__container {
+    gap: 1rem;
+  }
+
+  .padding {
+  }
+
+  .footer {
+    padding-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home__information {
+    font-size: var(--smallest-font-size);
+  }
+}
 
 @media screen and (max-width: 320px) {
   .nav__list {

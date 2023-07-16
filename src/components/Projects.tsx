@@ -21,7 +21,7 @@ const Project = ({ name, description, relevantUrl }: ProjectExperience) => {
 
 export const Projects = ({ entries }: ProjectsInterface) => {
   return (
-    <section className="proyects-experience section" id="proyects">
+    <section className="proyects-experience section" id="projects">
       <h2 className="section-title">Projects</h2>
       <div className="experience__container bd-grid">
         {entries.map((project) => (
